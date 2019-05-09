@@ -5,7 +5,7 @@ The medihelp folder conatins jupyter notebook and picture of some medicine to te
 the iteration2 contains the entire code
 
 
-The nee medihelp folder contains a flask app implementing the above feature.
+The new medihelp folder contains a flask app implementing the above feature.
 Simply drag and drop the picture to get the required result
 
 dependencies
