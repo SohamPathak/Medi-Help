@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+      <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> 
+    <!-- Bootstrap theme -->
+    <link href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/theme.css') }}" rel="stylesheet">
+    <style type="text/css">
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: 25%;
+}
+.bcenter{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+    .container theme-showcase{
+  background-image: url("static/bg2.jpg");
+  background-size: cover;
+    height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.container {
+  background-image: url("static/bg2.jpg");
+  background-size: cover;
+    height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+html,body{
+
+    background-image: url("static/bg2.jpg");
+}
+
+    </style>
+</head>
+<body>
+      <div class="container">
+     <img src="static/images/testimage.jpeg"  class="center" alt="Image"/>
+
+    <p>
+      <form method=POST class="form-signin" action="/getsummary">
+      <input class="btn btn-lg btn-primary btn-block" type=submit value=info >
+        
+     </form>
+     {{summary}}
+    </p>
+    <a class="btn btn-primary smooth-scroll mr-2" data-aos="zoom-in" href="" >Audio : choose language</a>
+    <form  action="/playaudio">
+  <input list="language" name="language">
+  <datalist id="language">
+    <option value="en">
+    <option value="fr">
+  </datalist>
+  <input type="submit">
+</form>
+<div class="container">
+</body>
+</html>
